@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css" type="text/css"> -->
+</head>
+<body class='container-black'>
+
+<header>
+    <% include ../partials/header %>
+</header>
+<main class="text-primary jumbotron">
+  
+  
+      <h2>Recently Activated Players</h2>
+
+      
+      <%if (dataArray != null) { %>
+        
+       
+            <% for(val in dataArray) { %>
+        
+       <div class="row">      
+              <div class="col"><%=`Player:${dataArray[val].player}`%></div> 
+              <div class="col"><%=`Position:${dataArray[val].position}`%></div>
+              <div class="col"><%=`College:${dataArray[val].college}`%></div>
+       
+          </div>
+
+              <% }; %>
+        <% } %>
+      </br>
+ 
+
+</main>
+
+<footer>
+  <% include ../partials/footer %>
+</footer>
+</body>
+</html>

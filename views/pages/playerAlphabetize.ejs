@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main class="text-primary">
+        <div class="jumbotron">
+            <h1>Alphabetized Lineup</h1>
+
+            <ul class="list-group">
+                <% for(var i=0; i<dataArray.length; i++) {%>
+                <li class="list-group-item">
+                    <%= "Player:  " + dataArray[i].player + "             Position: " + dataArray[i].position + "              College: " +dataArray[i].college %>
+                </li>
+                <% } %>
+            </ul>
+
+        </div>
+    </main>
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+
+</html>
